@@ -12,7 +12,7 @@
     "format": "prettier --write \"src/**/*.ts\""
   },
   "dependencies": {
-
+    "aws-sdk": "^2.713.0"
   },
   "devDependencies": {
     "@types/node": "^14.0.23",
