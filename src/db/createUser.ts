@@ -1,3 +1,4 @@
+import { Fakes } from '../test-utils/Fakes';
 import { db } from './client';
 
 export const createUser = () =>
@@ -5,9 +6,9 @@ export const createUser = () =>
     .put({
       TableName: 'users',
       Item: {
-        userId: '126',
-        name: 'noa',
-        age: 17
+        userId: Fakes.string(),
+        name: Fakes.string(),
+        age: Fakes.number()
       }
     })
     .promise();
