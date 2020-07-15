@@ -25,5 +25,16 @@
     "ts-loader": "^8.0.1",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.6"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "yarn format",
+      "yarn lint"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsc && lint-staged"
+    }
   }
 }
