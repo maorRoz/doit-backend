@@ -10,7 +10,7 @@ export const getUser = async (userId: User['userId']): Promise<User> => {
       }
     })
     .promise()
-    .catch(() => null)
+    .catch(() => null);
 
-    return userQueryResult.Item as User;
-  }
+  return userQueryResult.Item as User;
+};

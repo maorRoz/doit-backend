@@ -16,8 +16,11 @@ const tableParams = {
   }
 };
 
-export const createUserTable = () => dynamodb
-.createTable(tableParams)
-.promise()
-.then((data) => console.log('Created table.', JSON.stringify(data, null, 2)))
-.catch((err) => console.error('Error JSON.', JSON.stringify(err, null, 2)))
+export const createUserTable = () =>
+  dynamodb
+    .createTable(tableParams)
+    .promise()
+    .then((data) =>
+      console.log('Created table.', JSON.stringify(data, null, 2))
+    )
+    .catch((err) => console.error('Error JSON.', JSON.stringify(err, null, 2)));

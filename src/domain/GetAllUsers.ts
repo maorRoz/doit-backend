@@ -3,7 +3,9 @@ import { User } from '../types/User';
 const getUsersAverageAge = (users: User[]): number =>
   users.reduce((out, user) => (out += user.age), 0) / users.length;
 
-const ExtractUserAndFetchTime = (getUser: (userId:string) => Promise<User>) => async (
+const ExtractUserAndFetchTime = (
+  getUser: (userId: string) => Promise<User>
+) => async (
   userId: User['userId']
 ): Promise<{ user: User; fetchTime: number }> => {
   const startTime = Date.now();
@@ -15,7 +17,9 @@ const ExtractUserAndFetchTime = (getUser: (userId:string) => Promise<User>) => a
   return { user, fetchTime: endTime - startTime };
 };
 
-export const GetAllUsers = (getUser: (userId:string) => Promise<User>) => async (
+export const GetAllUsers = (
+  getUser: (userId: string) => Promise<User>
+) => async (
   userIds: User['userId'][]
 ): Promise<{
   users: User[];
