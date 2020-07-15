@@ -9,22 +9,42 @@
     "start": "ts-node src/index.ts",
     "dev": "yarn start",
     "lint": "eslint \"src/**/*.ts\" --fix",
-    "format": "prettier --write \"src/**/*.ts\""
+    "format": "prettier --write \"src/**/*.ts\"",
+    "test": "jest"
   },
   "dependencies": {
     "aws-sdk": "^2.713.0"
   },
   "devDependencies": {
+    "@types/faker": "^4.1.12",
+    "@types/jest": "^26.0.4",
+    "@types/lodash": "^4.14.157",
     "@types/node": "^14.0.23",
     "@typescript-eslint/eslint-plugin": "^3.6.1",
     "@typescript-eslint/parser": "^3.6.1",
     "eslint": "^7.4.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.22.0",
+    "faker": "^4.1.0",
+    "jest": "^26.1.0",
+    "lodash": "^4.17.19",
     "prettier": "^2.0.5",
+    "ts-jest": "^26.1.2",
     "ts-loader": "^8.0.1",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.6"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "testEnvironment": "node"
   },
   "lint-staged": {
     "*.ts": [
