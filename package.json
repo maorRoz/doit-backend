@@ -13,7 +13,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "aws-sdk": "^2.713.0"
+    "aws-sdk": "^2.814.0"
   },
   "devDependencies": {
     "@types/faker": "^4.1.12",
